@@ -16,7 +16,7 @@ type Packet struct {
 }
 
 func main() {
-	fmt.Println("Starting lightning-fast buffered parser...")
+	fmt.Println("Starting...")
 	startTime := time.Now()
 
 	file, err := os.Open("sample.bin")
@@ -25,7 +25,7 @@ func main() {
 	}
 	defer file.Close()
 
-	// Wrap the file in a buffered reader to eliminate millions of system calls
+	
 	reader := bufio.NewReader(file)
 	buf := make([]byte, 12)
 	packetCount := 0
